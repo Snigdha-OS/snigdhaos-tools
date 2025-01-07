@@ -9,7 +9,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onToggleSidebar }) => {
   return (
     <nav className="bg-dark-200 border-b border-dark-300 fixed w-full z-10 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <button
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onToggleSidebar }) => {
           </div>
           <div className="flex items-center space-x-4">
             <a
-              href="https://github.com/kalilinux"
+              href="https://github.com/Snigdha-OS"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-md hover:bg-dark-300 transition-colors duration-200 group"
@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = ({ isSidebarOpen, onToggleSidebar }) => {
               <Github className="w-6 h-6 text-nord-4 group-hover:text-primary transition-colors duration-200" />
             </a>
             <a
-              href="https://www.kali.org/docs/"
+              href="https://snigdha-os.github.io/documentation/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-md hover:bg-dark-300 transition-colors duration-200 group"

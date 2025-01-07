@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <span>for the security community</span>
           </div>
           <div className="text-sm text-nord-4">
-            © {new Date().getFullYear()} Snigdha OS Tools. All rights reserved.
+            © {new Date().getFullYear()} Snigdha OS Tools. All rights reserved.Powered by <b className='hover:text-primary'>TONMOY INFRASTRUCTURE™.</b>
           </div>
           <div className="flex items-center space-x-3 text-sm text-nord-4">
             <span>Developed by</span>
