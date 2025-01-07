@@ -7,6 +7,9 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  server: {
+    open: true, // Automatically opens in the default browser
+  },
   build: {
     rollupOptions: {
       output: {
