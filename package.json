@@ -1,15 +1,19 @@
 {
   "name": "snigdhaos-tools",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "author": "eshanized <m.eshanized@gmail.com> (https://github.com/eshanized)",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist",
+    "type-check": "tsc --noEmit",
+    "start": "vite --host"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",
@@ -28,9 +32,19 @@
     "gh-pages": "^6.3.0",
     "globals": "^15.9.0",
     "postcss": "^8.4.35",
+    "prettier": "^2.8.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snigdha-OS/snigdhaos-tools.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Snigdha-OS/snigdhaos-tools/issues"
+  },
+  "homepage": "https://github.com/Snigdha-OS/snigdhaos-tools#readme"
 }
