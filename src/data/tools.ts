@@ -24,7 +24,13 @@ export const kaliTools: Tool[] = [
       "Port scanning and service detection",
       "OS detection and version detection",
       "Vulnerability and backdoor detection",
-      "Network mapping and inventory"
+      "Network mapping and inventory",
+      "Firewall and packet filter evasion",
+      "DNS enumeration",
+      "Host identification and banner grabbing",
+      "Discover devices on a network with specific protocols (e.g., HTTP, FTP, SSH, etc.)",
+      "Perform stealthy scans to avoid detection by firewalls and intrusion detection systems (IDS)",
+      "Detect open ports on remote hosts and perform security assessments"
     ],
     commands: [
       {
@@ -46,9 +52,49 @@ export const kaliTools: Tool[] = [
         command: "nmap -A [target]",
         description: "Aggressive scan (OS detection, version detection, script scanning, and traceroute)",
         example: "nmap -A 192.168.1.1"
+      },
+      {
+        command: "nmap -sn [target]",
+        description: "Perform a simple ping scan to identify active hosts without scanning ports",
+        example: "nmap -sn 192.168.1.0/24"
+      },
+      {
+        command: "nmap -O [target]",
+        description: "Detect the operating system of the target",
+        example: "nmap -O 192.168.1.1"
+      },
+      {
+        command: "nmap -p [ports] [target]",
+        description: "Scan specific ports (comma-separated)",
+        example: "nmap -p 80,443 192.168.1.1"
+      },
+      {
+        command: "nmap --script [script] [target]",
+        description: "Run a specific NSE (Nmap Scripting Engine) script for additional testing",
+        example: "nmap --script http-vuln-cve2006-3392 192.168.1.1"
+      },
+      {
+        command: "nmap -T4 [target]",
+        description: "Set timing template (T4 is aggressive, speeds up the scan)",
+        example: "nmap -T4 192.168.1.1"
+      },
+      {
+        command: "nmap -6 [target]",
+        description: "Scan an IPv6 address",
+        example: "nmap -6 2001:0db8::ff00:0042:8329"
+      },
+      {
+        command: "nmap --traceroute [target]",
+        description: "Perform a traceroute to the target to determine the network path",
+        example: "nmap --traceroute 192.168.1.1"
+      },
+      {
+        command: "nmap -iL [input_file]",
+        description: "Scan hosts from a list in a file",
+        example: "nmap -iL targets.txt"
       }
     ]
-  },
+  },  
   {
     name: "Metasploit",
     category: "Exploitation Tools",
